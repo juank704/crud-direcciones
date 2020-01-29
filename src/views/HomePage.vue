@@ -15,14 +15,9 @@
     </section>
     <section class="container py-6">
 
-    
-    <v-data-table
-        :headers="headers"
-        :items="desserts"
-        :search="search"
-      ></v-data-table>
-
-
+  <div id="app">
+    <map-component /> 
+  </div>
 
 
       <h1 class="text-3xl font-light text-grey-darkest mb-3">Explore</h1>
@@ -54,9 +49,10 @@
 </template>
 
 <script>
-import { mapGetters, mapState } from 'vuex';
+import { mapGetters } from 'vuex';
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import TinySlider from '@/components/TinySlider.vue';
+import MapComponent from '@/components/MapComponent.vue';
 
 export default {
   name: 'HomePage',
@@ -71,6 +67,7 @@ export default {
   components: {
     DefaultLayout,
     TinySlider,
+    MapComponent,
   },
 };
 </script>

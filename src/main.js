@@ -1,10 +1,23 @@
 import Vue from 'vue';
 import firebase from 'firebase';
-//import vuetify from './plugins/vuetify' // path to vuetify export
+// import vuetify from './plugins/vuetify' // path to vuetify export
+import Toasted from 'vue-toasted';
+import * as VueGoogleMaps from 'vue2-google-maps';
 import App from './App.vue';
 import router from './router';
 import store from './store';
 
+Vue.use(Toasted, {
+  position: 'bottom-right',
+  duration: 3000,
+});
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyD2lZOI3utqwni0qO22gsKlEj0biVlREFg',
+    libraries: 'places',
+  },
+});
 
 Vue.config.productionTip = false;
 
@@ -37,4 +50,3 @@ new Vue({
     }
   },
 }).$mount('#app');
-
